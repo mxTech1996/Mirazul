@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { LuMapPin, LuPhone, LuMail } from 'react-icons/lu';
+import { dataSite } from '@/data';
 
 const ContactFooter = () => {
   // --- Estados para el formulario (se añade 'phone') ---
@@ -37,7 +38,7 @@ const ContactFooter = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      const recipientEmail = 'contacto@mirazul.com';
+      const recipientEmail = dataSite.email;
       const subject = `Project Consultation Request from ${formData.name}`;
       const body = `
         New project consultation request from your website.

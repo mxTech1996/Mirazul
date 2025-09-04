@@ -109,8 +109,8 @@ const Footer = () => {
             <h4 className='font-semibold text-gray-800 mb-4'>Contact</h4>
             <address className='not-italic text-gray-600 text-sm space-y-2'>
               <p> {dataSite.address} </p>
-              <p>(55) 1234-5678</p>
-              <p>contacto@mirazul.com</p>
+              <p>{dataSite.telephone}</p>
+              <p>{dataSite.email}</p>
             </address>
           </div>
         </div>
