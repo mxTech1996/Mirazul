@@ -66,43 +66,34 @@ const Footer = () => {
           </div>
           <div>
             <h4 className='font-semibold text-gray-800 mb-4'>Company</h4>
+
             <ul className='space-y-2'>
-              <li>
-                <a href='#about' className='text-gray-600 hover:text-pink-600'>
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href='#services'
-                  className='text-gray-600 hover:text-pink-600'
-                >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  href='#products'
-                  className='text-gray-600 hover:text-pink-600'
-                >
-                  Products
-                </a>
-              </li>
+              {footerLinks.explore.map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    className='text-gray-600 hover:text-pink-600'
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
             <h4 className='font-semibold text-gray-800 mb-4'>Support</h4>
             <ul className='space-y-2'>
-              <li>
-                <a href='#' className='text-gray-600 hover:text-pink-600'>
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href='#' className='text-gray-600 hover:text-pink-600'>
-                  Contact
-                </a>
-              </li>
+              {footerLinks.support.map((link) => (
+                <li key={link.name}>
+                  <a
+                    target='_blank'
+                    href={link.href}
+                    className='text-gray-600 hover:text-pink-600'
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
