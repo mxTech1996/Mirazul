@@ -1,99 +1,130 @@
+// En tu archivo: /components/BenefitsSection.js
 'use client';
 
-import { useState } from 'react';
-import { map } from 'lodash';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FiChevronDown } from 'react-icons/fi'; // Icono de flecha
-import { benefitsData } from '@/data';
+// Íconos para la lista de beneficios
+import { LuMegaphone, LuMousePointerClick, LuBarChart } from 'react-icons/lu';
 
-// --- Variantes para las animaciones ---
-
-const descriptionVariants = {
-  hidden: { opacity: 0, height: 0, marginTop: 0 },
-  visible: {
-    opacity: 1,
-    height: 'auto',
-    marginTop: '1rem',
-    transition: { duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] },
+// --- Datos para la sección ---
+const benefitsData = [
+  {
+    icon: <LuMegaphone size={24} />,
+    title: 'Boost Brand Awareness',
+    description:
+      'We create memorable campaigns that cut through the noise and place your brand in front of the right audience.',
+    color: 'bg-pink-500',
   },
-};
+  {
+    icon: <LuMousePointerClick size={24} />,
+    title: 'Drive Higher Conversions',
+    description:
+      'Our data-driven approach ensures every ad is optimized to turn viewers into loyal customers and increase sales.',
+    color: 'bg-orange-500',
+  },
+  {
+    icon: <LuBarChart size={24} />,
+    title: 'Achieve Measurable ROI',
+    description:
+      'We provide transparent reporting that clearly demonstrates the tangible return on your advertising investment.',
+    color: 'bg-pink-500',
+  },
+];
 
-// --- Componente ---
+const BenefitsSection = () => {
+  // Variantes para animación
+  const listVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 0.3 } },
+  };
 
-const MissionVisionSection = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const handleClick = (id) => {
-    // Si se hace clic en el mismo, se cierra. Si no, se abre el nuevo.
-    setActiveIndex(activeIndex === id ? null : id);
+  const itemVariants = {
+    hidden: { x: -20, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.6, ease: 'easeOut' },
+    },
   };
 
   return (
-    <div className='w-full flex flex-col items-center gap-6 py-20'>
-      <h1 className='text-3xl font-bold font-urbanist uppercase'>
-        Mission, Vision & Values
-      </h1>
-
-      <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10 w-full max-w-6xl'>
-        {map(benefitsData, (item) => (
-          <motion.div
-            key={item.id}
-            className='w-full flex flex-col'
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: item.id * 0.1 }}
+    <section id='benefits' className='py-20 md:py-28 bg-[#262B57] text-white'>
+      <div className='container mx-auto px-4'>
+        {/* --- Parte 1: Banner CTA --- */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.6 }}
+          className='flex flex-col md:flex-row justify-between items-center pb-12 mb-12 border-b border-blue-800/50'
+        >
+          <h2 className='text-3xl md:text-4xl font-bold text-center md:text-left'>
+            Ready to Launch a Campaign That Delivers?
+          </h2>
+          <a
+            href='/contact'
+            className='mt-6 md:mt-0 flex-shrink-0 px-8 py-3 bg-pink-600 font-semibold rounded-full hover:bg-pink-700 transition-colors duration-300'
           >
-            {/* Imagen */}
-            <div className='h-40 w-full flex justify-center'>
-              <Image
-                src={item.image}
-                alt={`${item.title} image`}
-                width={200}
-                height={200}
-                className='h-full w-auto object-contain' // Mejorado para que la imagen no se distorsione
-              />
-            </div>
+            Get a Free Quote
+          </a>
+        </motion.div>
 
-            {/* Contenido de texto */}
-            <div className='flex-1 flex flex-col mt-5 text-primary border border-gray-200 rounded-lg p-4'>
-              <button
-                onClick={() => handleClick(item.id)}
-                className='w-full flex justify-between items-center text-left'
-              >
-                <h2 className='font-bold text-xl sm:text-2xl font-urbanist'>
-                  {item.title}
-                </h2>
-                {/* Flecha animada */}
-                <motion.div
-                  animate={{ rotate: activeIndex === item.id ? 180 : 0 }}
-                  transition={{ duration: 0.3 }}
+        {/* --- Parte 2: Rejilla de Beneficios --- */}
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center'>
+          {/* --- Columna de Texto (Izquierda) --- */}
+          <motion.div
+            variants={listVariants}
+            initial='hidden'
+            whileInView='visible'
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <p className='font-semibold text-pink-500 mb-2'>OUR BENEFITS</p>
+            <h3 className='text-4xl font-bold mb-10'>
+              Benefits of working with Publydiseño
+            </h3>
+            <ul className='space-y-8'>
+              {benefitsData.map((benefit, index) => (
+                <motion.li
+                  key={index}
+                  variants={itemVariants}
+                  className='flex items-start gap-4'
                 >
-                  <FiChevronDown className='h-6 w-6' />
-                </motion.div>
-              </button>
-
-              {/* Descripción animada y colapsable */}
-              <AnimatePresence>
-                {activeIndex === item.id && (
-                  <motion.p
-                    className='text-sm sm:text-base font-light overflow-hidden'
-                    variants={descriptionVariants}
-                    initial='hidden'
-                    animate='visible'
-                    exit='hidden'
+                  <div
+                    className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center ${benefit.color}`}
                   >
-                    {item.description}
-                  </motion.p>
-                )}
-              </AnimatePresence>
-            </div>
+                    {benefit.icon}
+                  </div>
+                  <div>
+                    <h4 className='text-xl font-bold'>{benefit.title}</h4>
+                    <p className='text-blue-200/90 mt-1'>
+                      {benefit.description}
+                    </p>
+                  </div>
+                </motion.li>
+              ))}
+            </ul>
           </motion.div>
-        ))}
+
+          {/* --- Columna de Ilustración (Derecha) --- */}
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.7, ease: 'easeOut' }}
+            className='hidden lg:block'
+          >
+            <Image
+              src='/images/benefit.png' // Reemplaza con tu ilustración
+              alt='Illustration showing successful results'
+              width={500}
+              height={500}
+              className='w-full h-auto'
+            />
+          </motion.div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default MissionVisionSection;
+export default BenefitsSection;

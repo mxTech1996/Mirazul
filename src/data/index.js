@@ -1,8 +1,6 @@
-export const pageName = 'Golarzep';
-export const phoneNumber = '+525511447994';
-export const address =
-  'RIO POO NUMERO 43 COLONIA CUAUHTEMOC CP 6500 CUAUHTEMOC CIUDAD DE MEXICO';
-export const email = 'info@golarzep.com';
+export const pageName = 'Publicdiseño';
+
+export const email = 'publydise@emailsecure.lat';
 import { IoCall, IoFileTraySharp, IoMail } from 'react-icons/io5';
 
 export const navData = [
@@ -43,21 +41,6 @@ export const footerData = [
   },
 ];
 
-export const contactData = [
-  {
-    Icon: IoCall,
-    text: phoneNumber,
-  },
-  {
-    Icon: IoFileTraySharp,
-    text: address,
-  },
-  {
-    text: email,
-    Icon: IoMail,
-  },
-];
-
 export const benefitsData = [
   {
     id: 1,
@@ -82,270 +65,324 @@ export const benefitsData = [
   },
 ];
 
-export const productsData = [
-  {
-    id: 1,
-    price: '45.00',
-    name: 'CREATIVE WRITING',
-    description:
-      'Creative writing helps businesses stand out with unique content that engages their audience and cultivates brand loyalty. It can also inspire innovation and fresh perspectives.',
-    image: '/images/social-3.jpg',
-    stock: 1000,
-    features: [
-      'Unique and engaging content creation',
-      'Brand storytelling techniques',
-      'Audience engagement strategies',
-      'Innovation and creativity in writing',
-      'Effective communication through written word',
-    ],
-  },
-  {
-    id: 2,
-    price: '100.00',
-    name: 'ADVERTISING CONTENT',
-    description:
-      'Advertising content helps businesses promote their products or services and increase sales. It can be used to target specific audiences and create memorable brand experiences.',
-    image: '/images/business-2.jpg',
-    stock: 1000,
-    features: [
-      'Targeted advertising strategies',
-      'Brand messaging and positioning',
-      'Conversion-focused content creation',
-      'Measurable advertising campaign results',
-      'Memorable and impactful ad campaigns',
-    ],
-  },
-  {
-    id: 3,
-    price: '150.00',
-    name: 'SOCIAL MEDIA CONTENT',
-    description:
-      'Social media content helps businesses build their online presence and engage with their audience. It can be used to showcase products or services, share company news and promote brand loyalty.',
-    image: '/images/social-2.jpg',
-    stock: 1000,
-    features: [
-      'Social media platform optimization',
-      'Content calendar planning and scheduling',
-      'Audience targeting and engagement',
-      'Visual content creation (images, videos)',
-      'Analytics and performance tracking',
-    ],
-  },
-  {
-    id: 4,
-    price: '100.00',
-    name: 'CORPORATE CONTENT',
-    description:
-      'Corporate content helps businesses establish their brand identity and communicate their values to stakeholders. It can be used for internal communication, investor relations, and public relations.',
-    image: '/images/business-1.jpg',
-    stock: 1000,
-    features: [
-      'Brand identity development',
-      'Internal communication materials',
-      'Investor relations documents',
-      'Public relations content creation',
-      'Corporate storytelling and messaging',
-    ],
-  },
-  {
-    id: 5,
-    price: '60.00',
-    name: 'VIDEO PRODUCTION',
-    description:
-      'Video production is a powerful tool for businesses to convey their message effectively. This course covers video shooting, editing, and storytelling techniques to create compelling videos that captivate the audience.',
-    image: '/images/video.jpg',
-    stock: 8,
-    content: [
-      'Video shooting techniques',
-      'Video editing using industry-standard software',
-      'Storytelling through video',
-      'Effective video marketing strategies',
-      'Scriptwriting for video content',
-    ],
-  },
-  {
-    id: 6,
-    price: '55.00',
-    name: 'SOCIAL MEDIA MARKETING',
-    description:
-      'Social media marketing is essential for businesses to reach and engage their target audience. This course provides strategies for effective social media campaigns, content creation, and analytics to drive business growth.',
-    image: '/images/social-media.jpg',
-    stock: 3,
-    content: [
-      'Social media strategy development',
-      'Creating compelling social media content',
-      'Audience targeting and engagement',
-      'Social media advertising techniques',
-      'Analytics and measurement for social media success',
-    ],
-  },
-  {
-    id: 7,
-    price: '35.00',
-    name: 'GRAPHIC DESIGN',
-    description:
-      'Graphic design plays a crucial role in branding and visual communication. This course teaches the fundamentals of graphic design, including color theory, typography, layout design, and using design software.',
-    image: '/images/graphic.jpg',
-    stock: 10,
-    content: [
-      'Principles of graphic design',
-      'Color theory and typography',
-      'Layout design and composition',
-      'Using industry-standard design software',
-      'Creating visually appealing designs',
-    ],
-  },
-  {
-    id: 8,
-    price: '25.00',
-    name: 'BRAND STORYTELLING',
-    description:
-      'Brand storytelling is a powerful marketing technique that helps businesses connect with their audience on a deeper level. This course explores the art of crafting compelling brand stories that resonate with customers and leave a lasting impact.',
-    image: '/images/branding.jpg',
-    stock: 7,
-    content: [
-      'Understanding the importance of brand storytelling',
-      'Identifying brand values and key messages',
-      'Crafting a compelling brand narrative',
-      'Utilizing storytelling techniques across different platforms',
-      'Measuring the effectiveness of brand storytelling',
-    ],
-  },
-];
+export const dataSite = {
+  name: 'Publydiseño',
+  url: 'https://es.wiktionary.org/wiki/hol',
+  telephone: '5578869871',
+  email: 'publydise@emailsecure.lat',
+  address:
+    'TUXPAN 39, INTERIOR 703 A, ROMA SUR, CUAUHTEMOC, CIUDAD DE MEXICO, C.P. 06760',
+  description:
+    'Our website is designed to help businesses, entrepreneurs, and personal brands stand out in an increasingly competitive market. We offer comprehensive advertising solutions that combine creativity, strategy, and technology to increase your brand’s visibility and attract your ideal audience.\r\n\r\nThrough an intuitive and user-friendly platform, clients can explore our wide range of services, from digital campaigns on social media and search engine advertising to graphic design, audiovisual production, and content marketing strategies.',
+  subtitle: 'Creative Advertising Solutions That Drive Results',
+  image_hero:
+    'https://cms-webserver-statics.s3.amazonaws.com/media/websites/publi_1_G5EL33y.png',
+  image_hero2:
+    'https://cms-webserver-statics.s3.amazonaws.com/media/websites/publi2__MDEBg2a.png',
+  iconImage:
+    'https://cms-webserver-statics.s3.amazonaws.com/media/websites/publydiseo-makky-s-de-rl-de-cv-high-resolution-logo_T6xgxZH.png',
+  info: [],
+  services: [
+    {
+      title: 'Digital Campaign Management',
+      description:
+        'Creation, monitoring, and optimization of campaigns on Google Ads, Meta Ads, TikTok Ads, and other platforms.',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/services/punbli_3_.png',
+    },
+    {
+      title: 'Social Media Advertising',
+      description:
+        'Targeted strategies and sponsored content to increase reach, engagement, and conversions.',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/services/publi_4_.png',
+    },
+    {
+      title: 'Ad Design & Production',
+      description:
+        'Development of graphics, promotional videos, banners, and multimedia content for campaigns.',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/services/publi_5_.png',
+    },
+    {
+      title: 'Programmatic Advertising',
+      description:
+        'Automated media buying on websites and apps with advanced audience targeting.',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/services/publi_6_.png',
+    },
+    {
+      title: 'Advertising Strategy Consulting',
+      description:
+        'Advertising Strategy Consulting  Guidance to define goals, audiences, channels, and campaign budgets.',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/services/publi_7.png',
+    },
+  ],
+  references: [
+    {
+      name: 'Ana G., Owner of "Aromatic Corner Cafe',
+      description:
+        'As a coffee shop owner, I had neither the time nor the knowledge to handle social media advertising. The team from this site guided me step by step. They were incredibly patient and created an Instagram and Facebook campaign focused on my local community. In just three months, not only did I see more new people coming through the door mentioning the ads, but my online order sales increased by 40%. Highly recommended.',
+      rating: 5,
+      image: null,
+    },
+    {
+      name: 'Javier M., Ecommerce Manager at Urban',
+      description:
+        'After trying several agencies, we finally found a team that speaks our language. Their focus on data and constant optimization of our Google Ads and Programmatic Advertising campaigns is next level. The reports are clear, detailed, and they are always willing to explain every metric',
+      rating: 5,
+      image: null,
+    },
+    {
+      name: 'Carlos R., Financial Consultant',
+      description:
+        "Honestly, I was skeptical about whether digital advertising would work for my financial consulting services. The initial consultation was key; they didn't pressure me to sign up for the most expensive package, but instead recommended starting with a very specific Google search campaign",
+      rating: 5,
+      image: null,
+    },
+    {
+      name: 'Sofía L., Marketing Director',
+      description:
+        "What I value most about their service is their ability to understand our brand and act as a true strategic partner. They don't just execute campaigns; they propose creative ideas, from the banner designs to the ad copywriting",
+      rating: 5,
+      image: null,
+    },
+    {
+      name: 'Ricardo E., Founder of ConnectApp',
+      description:
+        'We needed to launch a new app, and time was critical. We hired their promotional video production service and the management of the YouTube and TikTok campaign. The video they produced was of incredible quality and perfectly captured the essence of our product.',
+      rating: 5,
+      image: null,
+    },
+  ],
+  products: [
+    {
+      id: 1154,
+      name: 'Branding & Graphic Design Kit',
+      category: null,
+      description:
+        'The Branding & Graphic Design Kit is a complete package that provides businesses with a strong and consistent visual identity. It includes essential design elements that reflect the brand’s values, mission, and style, ensuring a professional and recognizable presence across all platforms.',
+      price: '210.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_9_.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1155,
+      name: 'Promotional Video Production',
+      category: null,
+      description:
+        'Promotional Video Production is a complete service designed to create engaging, high-quality videos that effectively communicate a brand’s message, products, or services. These videos are crafted to capture audience attention, enhance brand visibility, and drive conversions across digital platforms.',
+      price: '179.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_10_.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1153,
+      name: 'Social Media Campaign Package',
+      category: null,
+      description:
+        'The Social Media Campaign Package is a comprehensive solution designed to help businesses build brand awareness, engage with their target audience, and drive measurable results across multiple social media platforms. It includes strategic planning, creative content development, and performance tracking to maximize impact.',
+      price: '230.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_8_.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1156,
+      name: 'SEO & SEM Pack',
+      category: null,
+      description:
+        'The SEO & SEM Pack is a comprehensive digital marketing solution designed to increase website visibility, drive targeted traffic, and maximize conversions. It combines organic search optimization (SEO) with paid advertising campaigns (SEM) to deliver measurable results',
+      price: '159.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_11.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1157,
+      name: 'Email Marketing Automation',
+      category: null,
+      description:
+        'Email Marketing Automation is a comprehensive solution that helps businesses engage, nurture, and convert leads through personalized and timely email campaigns. By automating workflows, it ensures consistent communication while saving time and increasing efficiency.',
+      price: '123.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_12.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1159,
+      name: 'Campaign Analysis & Reporting',
+      category: null,
+      description:
+        'Campaign Analysis & Reporting is a service that provides businesses with comprehensive insights into the performance of their marketing campaigns. By collecting, analyzing, and presenting data, it helps optimize strategies, maximize ROI, and make informed decisions for future campaigns.',
+      price: '140.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_14_.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1160,
+      name: 'Advertising Strategy Consulting',
+      category: null,
+      description:
+        'Advertising Strategy Consulting is a professional service designed to help businesses develop, optimize, and execute effective advertising strategies. By combining market insights, consumer behavior analysis, and industry best practices, this service ensures that advertising campaigns achieve maximum impact and ROI.',
+      price: '156.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_15_.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1158,
+      name: 'Premium Programmatic Advertising',
+      category: null,
+      description:
+        'Premium Programmatic Advertising is a data-driven solution designed to deliver highly targeted digital ads in real-time across multiple platforms. Leveraging advanced algorithms and audience insights, it maximizes reach, engagement, and ROI while reducing wasted ad spend.',
+      price: '180.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_1_3_.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1161,
+      name: 'Instagram Story Ads',
+      category: null,
+      description:
+        'Short, engaging ads designed specifically for Instagram Stories.',
+      price: '15.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_16_.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1162,
+      name: 'Custom Banner Design',
+      category: null,
+      description:
+        'Professionally designed banners for websites or digital campaigns.',
+      price: '30.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_17_.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1163,
+      name: 'YouTube Pre Roll Videos',
+      category: null,
+      description: 'Short video ads that play before YouTube content.',
+      price: '35.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_18_.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1164,
+      name: 'Google Ads Keyword Package',
+      category: null,
+      description:
+        'Curated sets of high-performing keywords for PPC campaigns.',
+      price: '40.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi19_.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1165,
+      name: 'Email Template Library',
+      category: null,
+      description:
+        'Pre designed, customizable templates for email marketing campaigns.',
+      price: '10.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_20_.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1166,
+      name: 'CAD & 3D Modeling Services',
+      category: null,
+      description:
+        'CAD & 3D Modeling Services provide professional solutions to transform conceptual ideas into precise and visually detailed digital models. These services are ideal for industries such as architecture, engineering, manufacturing, product design, animation, and gaming. They help optimize design processes, reduce production errors, and enhance visual communication with clients and technical teams.',
+      price: '250.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mia8_.png',
+      image2: null,
+      image3: null,
+    },
+  ],
+  categories: [],
+};
 
-export const additionalProducts = [
+export const phoneNumber = dataSite.telephone;
+export const address = dataSite.address;
+export const contactData = [
   {
-    id: 9,
-    price: '15.00',
-    name: 'Social Media Template Pack',
-    description:
-      'A pack of 10 professionally designed and fully customizable templates for Instagram posts and stories. The perfect tool to maintain a consistent and attractive feed with minimal effort.',
-    image: '/images/media.jpg',
-    stock: 5000,
-    features: [
-      '10 customizable templates (Canva/PSD)',
-      'Instagram Post & Story formats',
-      'Modern and clean design',
-      'Includes a quick-start guide',
-      'Boosts visual consistency',
-    ],
+    Icon: IoCall,
+    text: phoneNumber,
   },
   {
-    id: 10,
-    price: '9.00',
-    name: 'Brand Style Quick Guide',
-    description:
-      'A concise PDF guide that walks you through choosing the right colors, fonts, and imagery for your brand. Understand the basics of visual identity to communicate your message effectively.',
-    image: '/images/brand.jpg',
-    stock: 5000,
-    features: [
-      'Color psychology basics',
-      'Font pairing suggestions',
-      'How to create a mood board',
-      '5-step brand identity checklist',
-      'Printable PDF format',
-    ],
+    Icon: IoFileTraySharp,
+    text: address,
   },
   {
-    id: 11,
-    price: '7.00',
-    name: '50 Engaging Content Prompts',
-    description:
-      "Beat writer's block forever with this curated list of 50 content ideas and headline prompts for your blog, social media, and newsletters. Spark creativity and keep your audience engaged.",
-    image: '/images/prompt.jpg',
-    stock: 5000,
-    features: [
-      '20 blog post ideas',
-      '20 social media prompts',
-      '10 newsletter subject line formulas',
-      'Designed to boost engagement',
-      'Instant digital download',
-    ],
-  },
-  {
-    id: 12,
-    price: '12.00',
-    name: 'Starter Audio Pack for Videos',
-    description:
-      'A curated collection of 5 royalty-free background music tracks and 10 essential sound effects to give your video content a professional touch. Perfect for social media clips and corporate videos.',
-    image: '/images/audio.jpg',
-    stock: 5000,
-    features: [
-      '5 royalty-free music tracks',
-      '10 common sound effects (SFX)',
-      'High-quality MP3 files',
-      'Suitable for commercial use',
-      'Instant download link',
-    ],
-  },
-];
-export const categoriesData = [
-  {
-    name: 'Social Media',
-    image: '/images/social.svg',
-    id: 1,
-    items: [
-      'Community Management',
-      'Content Strategy',
-      'Ad Campaigns',
-      'Analytics',
-    ],
-  },
-  {
-    name: 'Marketing',
-    image: '/images/marketing.svg',
-    id: 2,
-    items: ['SEO & SEM', 'Email Marketing', 'Branding', 'Public Relations'],
-  },
-  {
-    name: 'Business',
-    image: '/images/business.svg',
-    id: 3,
-    items: ['E-commerce', 'Startup Planning', 'Project Management', 'Finance'],
-  },
-  {
-    name: 'Content Creator',
-    image: '/images/content.svg',
-    id: 4,
-    items: ['Video Production', 'Podcasting', 'Blogging', 'Live Streaming'],
-  },
-  {
-    name: 'Web and Mobile Development',
-    image: '/images/development.svg',
-    id: 5,
-    items: [
-      'React & Next.js',
-      'UI/UX Design',
-      'iOS & Android Apps',
-      'Backend APIs',
-    ],
-  },
-];
-
-export const references = [
-  {
-    title: 'María López',
-    description:
-      'This course on Creative Writing has transformed the way I approach content creation. The strategies and techniques taught have helped me engage my audience and create unique and compelling content for my business. Highly recommended!',
-  },
-  {
-    title: 'Carlos Rodríguez',
-    description:
-      'The Video Production course provided me with valuable skills in shooting and editing videos. I now have the confidence to create professional-looking videos for my business, and the storytelling techniques I learned have made a significant impact on my audience engagement.',
-  },
-  {
-    title: 'Laura Fernández',
-    description:
-      'I took the Social Media Marketing course, and it exceeded my expectations. The strategies and content creation tips shared were practical and effective. I now have a better understanding of how to leverage social media to grow my business and connect with my target audience.',
-  },
-  {
-    title: 'Diego Gómez',
-    description:
-      'The Graphic Design course was a game-changer for me. I learned the principles of design, color theory, and how to use design software effectively. Now I can create visually appealing designs that perfectly represent my brand. Thank you for this valuable course!',
-  },
-  {
-    title: 'Isabel Silva',
-    description:
-      'Brand Storytelling course helped me understand the power of storytelling in building a strong brand. I learned how to craft a compelling brand narrative that resonates with my customers. It has made a significant difference in how my brand is perceived in the market.',
+    text: email,
+    Icon: IoMail,
   },
 ];
