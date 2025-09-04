@@ -33,135 +33,94 @@ const footerLinks = {
 
 const Footer = () => {
   // Nombres de la empresa
-  const companyName = 'Publydiseño Makky';
-  const fullCompanyName = 'PUBLYDISEÑO MAKKY S DE RL DE CV';
-
-  // Variantes para animación
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2, delayChildren: 0.2 },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1 },
-  };
 
   return (
-    <footer className='bg-[#262B57] text-white'>
-      <div className='container mx-auto px-4 py-16'>
-        <motion.div
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12' // Cambiado a 5 columnas
-          variants={containerVariants}
-          initial='hidden'
-          whileInView='visible'
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          {/* Columna 1: Empresa */}
-          <motion.div
-            variants={itemVariants}
-            className='md:col-span-2 lg:col-span-1'
-          >
-            <h3 className='text-2xl font-bold mb-4'>{companyName}</h3>
-            <p className='text-blue-200/80 max-w-xs'>
-              We blend data-driven strategy with bold creativity to build
-              advertising campaigns that deliver results.
+    <footer className='py-20 bg-gray-50'>
+      <div className='container mx-auto px-4 max-w-6xl'>
+        {/* --- Parte 2: Enlaces del Footer --- */}
+        <hr className='my-16 border-gray-200' />
+
+        <div className='grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left'>
+          {/* El resto del footer se mantiene igual */}
+          <div>
+            <h3 className='text-xl font-bold text-gray-900 mb-4'>
+              Mirazul Proyecciones
+            </h3>
+            <p className='text-gray-600 text-sm'>
+              Engineering the Future of Construction.
             </p>
-          </motion.div>
 
-          {/* Columna 2: Explorar */}
-          <motion.div variants={itemVariants}>
-            <h4 className='font-bold text-lg mb-4 text-pink-500'>Explore</h4>
-            <ul className='space-y-2'>
-              {footerLinks.explore.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className='text-blue-100/90 hover:text-pink-500 transition-colors'
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* Columna 3: Soporte */}
-          <motion.div variants={itemVariants}>
-            <h4 className='font-bold text-lg mb-4 text-pink-500'>Support</h4>
-            <ul className='space-y-2'>
-              {footerLinks.support.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className='text-blue-100/90 hover:text-pink-500 transition-colors'
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* Columna 4: Contacto */}
-          <motion.div variants={itemVariants}>
-            <h4 className='font-bold text-lg mb-4 text-pink-500'>Contact Us</h4>
-            <address className='not-italic text-blue-100/90 space-y-4'>
-              <div className='flex items-start gap-3'>
-                <LuMapPin className='mt-1 flex-shrink-0' />
-                <span>{dataSite.address}</span>
-              </div>
-              <div className='flex items-center gap-3'>
-                <LuPhone />
-                <a
-                  href={`tel:+${dataSite.telephone}`}
-                  className='hover:text-pink-500'
-                >
-                  {dataSite.telephone}
-                </a>
-              </div>
-            </address>
-          </motion.div>
-
-          {/* Columna 5: Pagos (NUEVA) */}
-          <motion.div variants={itemVariants}>
-            <h4 className='font-bold text-lg mb-4 text-pink-500'>
-              Accepted Payments
-            </h4>
-            <div className='w-28 h-auto bg-white p-2 rounded-md'>
+            {/* Accepted payment image */}
+            <div className='mt-4 justify-center md:justify-start'>
+              <p className='text-gray-600 text-sm mr-4 self-center mb-5'>
+                Accepted Payments:
+              </p>
               <Image
                 src='/images/visaMaster.png'
-                alt='Visa and Mastercard logos'
+                alt='Accepted Payment Methods'
                 width={100}
-                height={30}
-                objectFit='contain'
+                height={40}
+                className='object-contain'
               />
             </div>
-          </motion.div>
-        </motion.div>
-      </div>
+          </div>
+          <div>
+            <h4 className='font-semibold text-gray-800 mb-4'>Company</h4>
+            <ul className='space-y-2'>
+              <li>
+                <a href='#about' className='text-gray-600 hover:text-pink-600'>
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href='#services'
+                  className='text-gray-600 hover:text-pink-600'
+                >
+                  Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href='#products'
+                  className='text-gray-600 hover:text-pink-600'
+                >
+                  Products
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className='font-semibold text-gray-800 mb-4'>Support</h4>
+            <ul className='space-y-2'>
+              <li>
+                <a href='#' className='text-gray-600 hover:text-pink-600'>
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href='#' className='text-gray-600 hover:text-pink-600'>
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className='font-semibold text-gray-800 mb-4'>Contact</h4>
+            <address className='not-italic text-gray-600 text-sm space-y-2'>
+              <p> {dataSite.address} </p>
+              <p>(55) 1234-5678</p>
+              <p>contacto@mirazul.com</p>
+            </address>
+          </div>
+        </div>
 
-      {/* --- Sub-Footer con Copyright y Redes Sociales --- */}
-      <div className='border-t border-blue-900/50'>
-        <div className='container mx-auto px-4 py-6 flex flex-col sm:flex-row justify-between items-center text-blue-200/70 text-sm'>
+        {/* --- Sub-Footer con Copyright --- */}
+        <div className='mt-16 pt-8 border-t border-gray-200 text-center text-gray-500 text-sm'>
           <p>
-            &copy; {new Date().getFullYear()} {fullCompanyName}. All Rights
-            Reserved.
+            &copy; {new Date().getFullYear()} MIRAZUL PROYECCIONES EN
+            EDIFICACION S DE RL DE CV. All Rights Reserved.
           </p>
-          {/* <div className='flex gap-4 mt-4 sm:mt-0'>
-            <a href='#' className='hover:text-pink-500 transition-colors'>
-              <LuTwitter size={20} />
-            </a>
-            <a href='#' className='hover:text-pink-500 transition-colors'>
-              <LuInstagram size={20} />
-            </a>
-            <a href='#' className='hover:text-pink-500 transition-colors'>
-              <LuLinkedin size={20} />
-            </a>
-          </div> */}
         </div>
       </div>
     </footer>

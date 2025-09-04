@@ -8,12 +8,12 @@ import { CartContext } from 'ui-old-version';
 const NavBar = ({ withCart = false, withAll = true, textBlack = false }) => {
   const { products } = useContext(CartContext);
   const navLinks = [
-    { name: 'Strategy', href: '#strategy' },
+    { name: 'Products', href: '#products' },
     { name: 'About Us', href: '#about' },
     { name: 'Services', href: '#services' },
-    { name: 'Benefits', href: '#benefits' },
+    { name: 'Why Choose us', href: '#why-choose-us' },
   ];
-  const companyName = 'Publydiseño Makky';
+  const companyName = 'Mirazul Proyecciones';
 
   return (
     <motion.header
@@ -23,21 +23,19 @@ const NavBar = ({ withCart = false, withAll = true, textBlack = false }) => {
       className='absolute top-0 left-0 right-0 z-20'
     >
       <div className='container mx-auto px-4'>
-        <div className='h-24 flex justify-between items-center'>
+        <div className='h-24 flex justify-between items-center text-white'>
           <div
-            className={`text-2xl font-bold ${
-              textBlack ? 'text-black' : 'text-white'
-            }`}
+            className={`text-2xl font-bold ${textBlack ? 'text-black' : ''}`}
           >
             {companyName}
           </div>
           {withAll && (
-            <nav className='hidden lg:flex gap-10 text-sm font-medium text-gray-200'>
+            <nav className='hidden lg:flex gap-10 text-sm font-medium'>
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className='hover:text-white transition-colors'
+                  className='opacity-80 hover:opacity-100 transition-opacity'
                 >
                   {link.name}
                 </a>
@@ -49,9 +47,9 @@ const NavBar = ({ withCart = false, withAll = true, textBlack = false }) => {
           ) : (
             <a
               href='/contact'
-              className='hidden md:block px-6 py-2 bg-pink-600 text-white font-semibold rounded-full hover:bg-pink-700 transition-colors'
+              className='hidden md:block px-6 py-2 bg-pink-600 font-semibold rounded-md hover:bg-pink-700 transition-colors'
             >
-              Contact Us
+              Get a Quote
             </a>
           )}
         </div>
@@ -66,7 +64,7 @@ const ShopButtonWithCounter = ({ itemCount }) => {
   return (
     <a
       href='/my-cart'
-      className='hidden md:block px-6 py-2 bg-[#262B57] text-gray-900 font-semibold rounded-full hover:bg-[#3b3f6b] transition-all duration-300 transform hover:scale-105'
+      className='hidden md:block px-6 py-2 bg-pink-600 text-gray-900 font-semibold rounded-full hover:bg-[#3b3f6b] transition-all duration-300 transform hover:scale-105'
     >
       <FaShoppingBag className='inline-block mr-2 text-white ' />
       {itemCount > 0 && (

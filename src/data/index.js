@@ -1,6 +1,6 @@
-export const pageName = 'Publicdiseño';
+export const pageName = 'Mirazul';
 
-export const email = 'publydise@emailsecure.lat';
+export const email = 'mirazul@emailsecure.lat';
 import { IoCall, IoFileTraySharp, IoMail } from 'react-icons/io5';
 
 export const navData = [
@@ -66,303 +66,284 @@ export const benefitsData = [
 ];
 
 export const dataSite = {
-  name: 'Publydiseño',
+  name: 'Mirazul',
   url: 'https://es.wiktionary.org/wiki/hol',
-  telephone: '5578869871',
-  email: 'publydise@emailsecure.lat',
+  telephone: '5523021842',
+  email: 'mirazul@emailsecure.lat',
   address:
-    'TUXPAN 39, INTERIOR 703 A, ROMA SUR, CUAUHTEMOC, CIUDAD DE MEXICO, C.P. 06760',
+    'AV HOMERO 538, 303 B, POLANCO V SECCION, MIGUEL HIDALGO, CIUDAD DE MEXICO, C.P. 11560',
   description:
-    'Our website is designed to help businesses, entrepreneurs, and personal brands stand out in an increasingly competitive market. We offer comprehensive advertising solutions that combine creativity, strategy, and technology to increase your brand’s visibility and attract your ideal audience.\r\n\r\nThrough an intuitive and user-friendly platform, clients can explore our wide range of services, from digital campaigns on social media and search engine advertising to graphic design, audiovisual production, and content marketing strategies.',
-  subtitle: 'Creative Advertising Solutions That Drive Results',
+    'Our website is the go to digital platform for businesses and individuals seeking innovative engineering solutions. We offer a wide range of specialized services, from the design and development of industrial, civil, and mechanical projects to technical consulting and process optimization.',
+  subtitle: 'Engineering Excellence, Tailored for Your Success',
   image_hero:
-    'https://cms-webserver-statics.s3.amazonaws.com/media/websites/publi_1_G5EL33y.png',
+    'https://cms-webserver-statics.s3.amazonaws.com/media/websites/mira_1_.png',
   image_hero2:
-    'https://cms-webserver-statics.s3.amazonaws.com/media/websites/publi2__MDEBg2a.png',
+    'https://cms-webserver-statics.s3.amazonaws.com/media/websites/mira._2.png',
   iconImage:
-    'https://cms-webserver-statics.s3.amazonaws.com/media/websites/publydiseo-makky-s-de-rl-de-cv-high-resolution-logo_T6xgxZH.png',
+    'https://cms-webserver-statics.s3.amazonaws.com/media/websites/mirazul-high-resolution-logo.png',
   info: [],
   services: [
     {
-      title: 'Digital Campaign Management',
+      title: 'Project Design & Development',
       description:
-        'Creation, monitoring, and optimization of campaigns on Google Ads, Meta Ads, TikTok Ads, and other platforms.',
+        'Design and development of industrial, civil, or mechanical projects.',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/services/punbli_3_.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/services/mira_3.png',
     },
     {
-      title: 'Social Media Advertising',
+      title: 'Technical Consulting',
       description:
-        'Targeted strategies and sponsored content to increase reach, engagement, and conversions.',
+        'Specialized engineering consulting to optimize processes and solutions.',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/services/publi_4_.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/services/mira_4_.png',
     },
     {
-      title: 'Ad Design & Production',
+      title: 'Process Optimization & Efficiency',
       description:
-        'Development of graphics, promotional videos, banners, and multimedia content for campaigns.',
+        'Improvement of production and operational processes for greater efficiency.',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/services/publi_5_.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/services/mirarazul_5.png',
     },
     {
-      title: 'Programmatic Advertising',
+      title: 'Structural Analysis & Testing',
       description:
-        'Automated media buying on websites and apps with advanced audience targeting.',
+        'Structural analysis and testing to ensure safety and quality.',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/services/publi_6_.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/services/mira_6_.png',
     },
     {
-      title: 'Advertising Strategy Consulting',
+      title: 'Sustainable & Innovative Solutions',
       description:
-        'Advertising Strategy Consulting  Guidance to define goals, audiences, channels, and campaign budgets.',
+        'Implementation of sustainable and innovative solutions tailored to each project.',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/services/publi_7.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/services/mira_7_.png',
     },
   ],
   references: [
     {
-      name: 'Ana G., Owner of "Aromatic Corner Cafe',
+      name: 'Raul,Product Development Manager',
       description:
-        'As a coffee shop owner, I had neither the time nor the knowledge to handle social media advertising. The team from this site guided me step by step. They were incredibly patient and created an Instagram and Facebook campaign focused on my local community. In just three months, not only did I see more new people coming through the door mentioning the ads, but my online order sales increased by 40%. Highly recommended.',
+        'The CAD & 3D Modeling service we received was exceptional. The team was not only fast and accurate, but they also offered design suggestions that improved the functionality of our part. Communication was seamless, and the client portal made it easy to track progress. We will definitely use their services again for future prototypes.',
       rating: 5,
       image: null,
     },
     {
-      name: 'Javier M., Ecommerce Manager at Urban',
+      name: 'Alejandro Roma',
       description:
-        'After trying several agencies, we finally found a team that speaks our language. Their focus on data and constant optimization of our Google Ads and Programmatic Advertising campaigns is next level. The reports are clear, detailed, and they are always willing to explain every metric',
+        'We needed a complete structural analysis for a complex project, and the report they provided was incredibly detailed and easy to understand. Their team identified potential issues we had overlooked and offered practical, cost-effective solutions. Their professionalism and thoroughness gave us the confidence to move forward with the project. Highly recommended!',
       rating: 5,
       image: null,
     },
     {
-      name: 'Carlos R., Financial Consultant',
+      name: 'Marlen Mendez',
       description:
-        "Honestly, I was skeptical about whether digital advertising would work for my financial consulting services. The initial consultation was key; they didn't pressure me to sign up for the most expensive package, but instead recommended starting with a very specific Google search campaign",
+        'We were looking to improve the efficiency of our production line, and their process optimization audit and solutions were a total game-changer. The team identified key bottlenecks and helped us implement a new workflow that has increased our output by 15%. The investment paid for itself in a matter of months. Excellent service.',
       rating: 5,
       image: null,
     },
     {
-      name: 'Sofía L., Marketing Director',
+      name: 'Javier Romero',
       description:
-        "What I value most about their service is their ability to understand our brand and act as a true strategic partner. They don't just execute campaigns; they propose creative ideas, from the banner designs to the ad copywriting",
+        'The implementation of custom automation modules for our warehouse has been a resounding success. The engineering team worked closely with us to understand our unique challenges and designed a solution that integrated perfectly with our existing systems. The efficiency and reduction in errors have exceeded our expectations.',
       rating: 5,
       image: null,
     },
     {
-      name: 'Ricardo E., Founder of ConnectApp',
+      name: 'David Gutierrez',
       description:
-        'We needed to launch a new app, and time was critical. We hired their promotional video production service and the management of the YouTube and TikTok campaign. The video they produced was of incredible quality and perfectly captured the essence of our product.',
+        'We had an urgent technical challenge and needed expert consultation immediately. The engineering team not only responded quickly but also provided us with clear and actionable advice that helped us resolve the issue in record time. Their deep knowledge and ability to explain complex concepts were truly impressive',
       rating: 5,
       image: null,
     },
   ],
   products: [
     {
-      id: 1154,
-      name: 'Branding & Graphic Design Kit',
+      id: 1170,
+      name: 'Energy Efficiency Audits',
       category: null,
       description:
-        'The Branding & Graphic Design Kit is a complete package that provides businesses with a strong and consistent visual identity. It includes essential design elements that reflect the brand’s values, mission, and style, ensuring a professional and recognizable presence across all platforms.',
-      price: '210.00',
+        'Energy Efficiency Audits are systematic evaluations of a building, facility, or industrial process to identify opportunities for reducing energy consumption, lowering costs, and minimizing environmental impact. These audits provide actionable insights to improve energy performance and ensure compliance with sustainability standards.',
+      price: '150.00',
       stock: 100,
       content: '',
       product_type: 'NORMAL',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_9_.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mira_azul_12.png',
       image2: null,
       image3: null,
     },
     {
-      id: 1155,
-      name: 'Promotional Video Production',
+      id: 1167,
+      name: 'Prototype Development Kits',
       category: null,
       description:
-        'Promotional Video Production is a complete service designed to create engaging, high-quality videos that effectively communicate a brand’s message, products, or services. These videos are crafted to capture audience attention, enhance brand visibility, and drive conversions across digital platforms.',
-      price: '179.00',
-      stock: 100,
-      content: '',
-      product_type: 'NORMAL',
-      image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_10_.png',
-      image2: null,
-      image3: null,
-    },
-    {
-      id: 1153,
-      name: 'Social Media Campaign Package',
-      category: null,
-      description:
-        'The Social Media Campaign Package is a comprehensive solution designed to help businesses build brand awareness, engage with their target audience, and drive measurable results across multiple social media platforms. It includes strategic planning, creative content development, and performance tracking to maximize impact.',
+        'Prototype Development Kits (PDKs) are comprehensive toolsets designed to help developers, engineers, and designers quickly create, test, and refine new product ideas or electronic systems. They provide a hands-on environment for experimentation and proof-of-concept development.',
       price: '230.00',
       stock: 100,
       content: '',
       product_type: 'NORMAL',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_8_.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mira_azul_9.png',
       image2: null,
       image3: null,
     },
     {
-      id: 1156,
-      name: 'SEO & SEM Pack',
+      id: 1168,
+      name: 'Structural Analysis Reports',
       category: null,
       description:
-        'The SEO & SEM Pack is a comprehensive digital marketing solution designed to increase website visibility, drive targeted traffic, and maximize conversions. It combines organic search optimization (SEO) with paid advertising campaigns (SEM) to deliver measurable results',
-      price: '159.00',
+        'Structural Analysis Reports provide detailed assessments of a building, infrastructure, or mechanical system’s structural integrity. They are used by engineers, architects, and construction professionals to ensure safety, compliance with regulations, and optimal design performance',
+      price: '240.00',
       stock: 100,
       content: '',
       product_type: 'NORMAL',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_11.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mira_azul_10_.png',
       image2: null,
       image3: null,
     },
     {
-      id: 1157,
-      name: 'Email Marketing Automation',
+      id: 1169,
+      name: 'Automation System Solutions',
       category: null,
       description:
-        'Email Marketing Automation is a comprehensive solution that helps businesses engage, nurture, and convert leads through personalized and timely email campaigns. By automating workflows, it ensures consistent communication while saving time and increasing efficiency.',
-      price: '123.00',
-      stock: 100,
-      content: '',
-      product_type: 'NORMAL',
-      image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_12.png',
-      image2: null,
-      image3: null,
-    },
-    {
-      id: 1159,
-      name: 'Campaign Analysis & Reporting',
-      category: null,
-      description:
-        'Campaign Analysis & Reporting is a service that provides businesses with comprehensive insights into the performance of their marketing campaigns. By collecting, analyzing, and presenting data, it helps optimize strategies, maximize ROI, and make informed decisions for future campaigns.',
+        'Automation System Solutions are integrated systems designed to automate, monitor, and optimize processes in industrial, commercial, or residential settings. They combine hardware, software, and control technologies to improve efficiency, reduce errors, and enable real-time management.',
       price: '140.00',
       stock: 100,
       content: '',
       product_type: 'NORMAL',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_14_.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mira_azul_11.png',
       image2: null,
       image3: null,
     },
     {
-      id: 1160,
-      name: 'Advertising Strategy Consulting',
+      id: 1174,
+      name: 'Technical Documentation Services',
       category: null,
       description:
-        'Advertising Strategy Consulting is a professional service designed to help businesses develop, optimize, and execute effective advertising strategies. By combining market insights, consumer behavior analysis, and industry best practices, this service ensures that advertising campaigns achieve maximum impact and ROI.',
-      price: '156.00',
+        'Technical Documentation Services provide professional creation, organization, and management of documents that explain, instruct, or support the use of products, systems, or processes. These services ensure clarity, compliance, and accessibility for engineers, developers, clients, and end-users.',
+      price: '90.00',
       stock: 100,
       content: '',
       product_type: 'NORMAL',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_15_.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mira_azul_16_.png',
       image2: null,
       image3: null,
     },
     {
-      id: 1158,
-      name: 'Premium Programmatic Advertising',
+      id: 1171,
+      name: 'Engineering Software Tools',
       category: null,
       description:
-        'Premium Programmatic Advertising is a data-driven solution designed to deliver highly targeted digital ads in real-time across multiple platforms. Leveraging advanced algorithms and audience insights, it maximizes reach, engagement, and ROI while reducing wasted ad spend.',
-      price: '180.00',
+        'Engineering Software Tools are specialized applications designed to assist engineers in designing, modeling, simulating, and analyzing products, structures, or systems. They enhance precision, efficiency, and collaboration in engineering projects across various disciplines.',
+      price: '189.00',
       stock: 100,
       content: '',
       product_type: 'NORMAL',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_1_3_.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/miraazul_13.png',
       image2: null,
       image3: null,
     },
     {
-      id: 1161,
-      name: 'Instagram Story Ads',
+      id: 1172,
+      name: 'CAD & 3D Modeling Services',
       category: null,
       description:
-        'Short, engaging ads designed specifically for Instagram Stories.',
-      price: '15.00',
+        'CAD & 3D Modeling Services provide professional computer-aided design and three-dimensional modeling solutions for products, structures, machinery, or architectural projects. These services help clients visualize, plan, and refine designs before production or construction.',
+      price: '120.00',
       stock: 100,
       content: '',
       product_type: 'NORMAL',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_16_.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mia_azul_14.png',
       image2: null,
       image3: null,
     },
     {
-      id: 1162,
-      name: 'Custom Banner Design',
+      id: 1173,
+      name: 'Project Management Packages',
       category: null,
       description:
-        'Professionally designed banners for websites or digital campaigns.',
+        'Project Management Packages are comprehensive solutions designed to help organizations plan, execute, monitor, and complete projects efficiently. They provide tools, templates, and methodologies to streamline workflows, manage resources, and ensure projects are delivered on time and within budget.',
+      price: '240.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mira_azul_15_.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1175,
+      name: '3D Modeling for Mechanical Parts',
+      category: null,
+      description: '3D modeling specifically for mechanical components.',
+      price: '20.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mira_azul_17_.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1176,
+      name: 'Custom Automation Modules',
+      category: null,
+      description: 'Customized automation modules for industrial processes.',
+      price: '25.00',
+      stock: 100,
+      content: '',
+      product_type: 'NORMAL',
+      image:
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/miraazul_18.png',
+      image2: null,
+      image3: null,
+    },
+    {
+      id: 1177,
+      name: 'Structural Integrity Testing',
+      category: null,
+      description: 'Specialized testing of structural integrity.',
       price: '30.00',
       stock: 100,
       content: '',
       product_type: 'NORMAL',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_17_.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/miraazul_19.png',
       image2: null,
       image3: null,
     },
     {
-      id: 1163,
-      name: 'YouTube Pre Roll Videos',
+      id: 1178,
+      name: 'Energy Consumption Reports',
       category: null,
-      description: 'Short video ads that play before YouTube content.',
-      price: '35.00',
-      stock: 100,
-      content: '',
-      product_type: 'NORMAL',
-      image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_18_.png',
-      image2: null,
-      image3: null,
-    },
-    {
-      id: 1164,
-      name: 'Google Ads Keyword Package',
-      category: null,
-      description:
-        'Curated sets of high-performing keywords for PPC campaigns.',
+      description: 'Detailed reports on energy usage and efficiency.',
       price: '40.00',
       stock: 100,
       content: '',
       product_type: 'NORMAL',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi19_.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mirazul_20_.png',
       image2: null,
       image3: null,
     },
     {
-      id: 1165,
-      name: 'Email Template Library',
+      id: 1179,
+      name: 'Technical Drafting & Schematics',
       category: null,
-      description:
-        'Pre designed, customizable templates for email marketing campaigns.',
-      price: '10.00',
+      description: 'Preparation of detailed technical drawings and schematics.',
+      price: '48.00',
       stock: 100,
       content: '',
       product_type: 'NORMAL',
       image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/publi_20_.png',
-      image2: null,
-      image3: null,
-    },
-    {
-      id: 1166,
-      name: 'CAD & 3D Modeling Services',
-      category: null,
-      description:
-        'CAD & 3D Modeling Services provide professional solutions to transform conceptual ideas into precise and visually detailed digital models. These services are ideal for industries such as architecture, engineering, manufacturing, product design, animation, and gaming. They help optimize design processes, reduce production errors, and enhance visual communication with clients and technical teams.',
-      price: '250.00',
-      stock: 100,
-      content: '',
-      product_type: 'NORMAL',
-      image:
-        'https://cms-webserver-statics.s3.amazonaws.com/media/products/mia8_.png',
+        'https://cms-webserver-statics.s3.amazonaws.com/media/products/miraazul_21.png',
       image2: null,
       image3: null,
     },

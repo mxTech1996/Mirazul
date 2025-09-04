@@ -103,7 +103,7 @@ const LoginPage = () => {
                 required
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                className='w-full px-4 py-3 text-gray-800 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1F253B]'
+                className='w-full px-4 py-3 text-gray-800 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300'
                 placeholder='you@example.com'
               />
             </div>
@@ -124,7 +124,7 @@ const LoginPage = () => {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className='w-full px-4 py-3 text-gray-800 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1F253B]'
+                className='w-full px-4 py-3 text-gray-800 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300'
                 placeholder='••••••••'
               />
             </div>
@@ -136,7 +136,7 @@ const LoginPage = () => {
             <div>
               <button
                 type='submit'
-                className='w-full px-4 py-3 font-semibold text-white bg-[#262B57] rounded-lg hover:bg-[#1F253B] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1F253B] transition-colors duration-300'
+                className='w-full px-4 py-3 font-semibold text-white bg-pink-600 rounded-lg hover:bg-pink-ring-pink-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-300 transition-colors duration-300'
               >
                 Sign In
               </button>

@@ -1,11 +1,21 @@
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+// CÓDIGO COMPLETO PARA LA PRIMERA SECCIÓN
+// Guárdalo en un archivo como: /components/Hero.js
 
+'use client';
+
+import { motion } from 'framer-motion';
+// Ícono para la flecha de scroll
+import { LuChevronDown } from 'react-icons/lu';
+
+// --- Componente Principal de la Sección Hero ---
 const HeroSection = () => {
   // Variantes para animación escalonada
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2, delayChildren: 0.3 },
+    },
   };
 
   const itemVariants = {
@@ -18,88 +28,60 @@ const HeroSection = () => {
   };
 
   return (
-    <section className='relative w-full min-h-screen bg-[#262B57] text-white flex items-center overflow-hidden'>
-      {/* Patrones de puntos decorativos */}
-      <div className='absolute top-20 left-20 w-48 h-48 bg-radial-gradient opacity-20'></div>
-      <div className='absolute bottom-20 right-20 w-48 h-48 bg-radial-gradient opacity-20'></div>
-
-      <div className='container mx-auto px-4'>
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
-          {/* Columna de Texto (Izquierda) */}
-          <motion.div
-            className='text-center lg:text-left z-10'
-            variants={containerVariants}
-            initial='hidden'
-            whileInView='visible'
-            viewport={{ once: true }}
-          >
-            <motion.p
-              variants={itemVariants}
-              className='font-semibold text-pink-500 mb-2'
-            >
-              AWARD-WINNING ADVERTISING AGENCY
-            </motion.p>
-            <motion.h1
-              variants={itemVariants}
-              className='text-5xl md:text-6xl font-extrabold leading-tight mb-6'
-            >
-              Creative Campaigns That Captivate & Convert.
-            </motion.h1>
-            <motion.p
-              variants={itemVariants}
-              className='text-lg text-blue-100 mb-8 max-w-lg mx-auto lg:mx-0'
-            >
-              We blend data-driven strategy with bold creativity to build
-              advertising campaigns that not only get noticed but deliver
-              measurable results.
-            </motion.p>
-            <motion.div
-              variants={itemVariants}
-              className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start'
-            >
-              <a
-                href='#services'
-                className='px-8 py-3 bg-orange-500 text-white font-semibold rounded-full hover:bg-orange-600 transition-colors duration-300'
-              >
-                Our Services
-              </a>
-              <a
-                href='#benefits'
-                className='px-8 py-3 bg-transparent text-white font-semibold rounded-full border-2 border-white/50 hover:bg-white hover:text-blue-900 transition-colors duration-300'
-              >
-                View Our Work
-              </a>
-            </motion.div>
-          </motion.div>
-
-          {/* Columna de Ilustración (Derecha) */}
-          <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-            className='hidden lg:block relative w-full h-[500px]'
-          >
-            <Image
-              src='/images/hero.png' // Reemplaza con tu ilustración
-              alt='Creative team brainstorming an advertising campaign'
-              layout='fill'
-              objectFit='contain'
-            />
-          </motion.div>
-        </div>
+    <section className='relative w-full h-screen bg-gradient-to-br from-indigo-800 via-purple-700 to-pink-700 text-white flex flex-col justify-center items-center overflow-hidden'>
+      {/* Patrones geométricos de fondo */}
+      <div className='absolute top-0 left-0 w-full h-full opacity-20'>
+        <div className='absolute top-1/4 left-1/4 w-96 h-96 border-2 border-white/20 rounded-full'></div>
+        <div className='absolute bottom-1/4 right-1/4 w-72 h-72 border-2 border-white/20 rounded-full'></div>
       </div>
-      {/* Añadimos un style global para el patrón de puntos si es necesario */}
-      <style jsx global>{`
-        .bg-radial-gradient {
-          background-image: radial-gradient(
-            circle,
-            rgba(255, 255, 255, 0.5) 1px,
-            transparent 1px
-          );
-          background-size: 1rem 1rem;
-        }
-      `}</style>
+
+      <div className='container mx-auto px-4 relative z-10'>
+        <motion.div
+          className='text-center max-w-4xl mx-auto'
+          variants={containerVariants}
+          initial='hidden'
+          animate='visible'
+        >
+          <motion.p
+            variants={itemVariants}
+            className='font-semibold text-pink-300 mb-2 uppercase tracking-widest'
+          >
+            Innovative Engineering Solutions
+          </motion.p>
+          <motion.h1
+            variants={itemVariants}
+            className='text-5xl md:text-7xl font-extrabold leading-tight mb-6'
+          >
+            Engineering the Future of Construction.
+          </motion.h1>
+          <motion.p
+            variants={itemVariants}
+            className='text-lg text-indigo-100/90 mb-8 max-w-2xl mx-auto'
+          >
+            From conceptual design to project completion, we deliver
+            cutting-edge engineering services that ensure quality, efficiency,
+            and structural integrity for the modern world.
+          </motion.p>
+          <motion.div variants={itemVariants}>
+            <a
+              href='#services'
+              className='px-10 py-4 bg-pink-600 text-white font-semibold rounded-md hover:bg-pink-700 transition-colors duration-300 transform hover:scale-105'
+            >
+              Explore Our Services
+            </a>
+          </motion.div>
+        </motion.div>
+      </div>
+
+      {/* Flecha animada para invitar al scroll */}
+      <motion.div
+        className='absolute bottom-10'
+        initial={{ y: 0, opacity: 0.7 }}
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+      >
+        <LuChevronDown size={32} />
+      </motion.div>
     </section>
   );
 };

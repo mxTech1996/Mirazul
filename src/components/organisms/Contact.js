@@ -1,17 +1,17 @@
-// En tu archivo: /components/ContactSection.js
+// En tu archivo: /components/ContactFooter.js (ACTUALIZADO)
 'use client';
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { LuMapPin, LuPhone, LuMail } from 'react-icons/lu';
-import { dataSite, email } from '@/data';
 
-const ContactSection = () => {
-  // --- Estados para el formulario (sin cambios) ---
+const ContactFooter = () => {
+  // --- Estados para el formulario (se añade 'phone') ---
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     message: '',
   });
   const [errors, setErrors] = useState({});
@@ -26,7 +26,8 @@ const ContactSection = () => {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Email is invalid.';
     }
-    if (!formData.message.trim()) newErrors.message = 'Message is required.';
+    if (!formData.message.trim())
+      newErrors.message = 'A brief message is required.';
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -36,31 +37,29 @@ const ContactSection = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      // 1. Define tu correo electrónico de destino
-      const recipientEmail = 'hola@publydiseno.com';
-
-      // 2. Crea el asunto y el cuerpo del correo con los datos del formulario
-      const subject = `Contact Form Submission from ${formData.name}`;
+      const recipientEmail = 'contacto@mirazul.com';
+      const subject = `Project Consultation Request from ${formData.name}`;
       const body = `
-        New message received from your website contact form.
+        New project consultation request from your website.
         
-        --- SENDER DETAILS ---
+        --- Client Details ---
         Name: ${formData.name}
         Email: ${formData.email}
+        Phone: ${formData.phone || 'Not provided'}
         
-        --- MESSAGE ---
+        --- Project Details ---
         ${formData.message}
       `;
 
-      // 3. Codifica el asunto y el cuerpo para que funcionen correctamente en una URL
+      // Codificar para URL
       const encodedSubject = encodeURIComponent(subject);
       const encodedBody = encodeURIComponent(body);
 
-      // 4. Construye y activa el enlace mailto
+      // Crear y activar el enlace mailto
       const mailtoUrl = `mailto:${recipientEmail}?subject=${encodedSubject}&body=${encodedBody}`;
       window.location.href = mailtoUrl;
 
-      // 5. Muestra el mensaje de éxito en la página
+      // Mostrar mensaje de éxito
       setIsSubmitted(true);
     }
   };
@@ -71,205 +70,115 @@ const ContactSection = () => {
   };
 
   return (
-    <section className='relative py-20 md:py-28 bg-white overflow-hidden'>
-      {/* Divisor ondulado superior */}
-      <div className='absolute top-0 left-0 w-full'>
-        <svg
-          viewBox='0 0 1440 100'
-          fill='none'
-          xmlns='http://www.w3.org/2000/svg'
-        >
-          <path
-            d='M0 0H1440V100C1181.33 -18.6667 809.5 26.6667 550.5 72C291.5 117.333 131.333 58.6667 0 0Z'
-            fill='#F3F4F6'
-          />
-        </svg>
-      </div>
-
-      <div className='container mx-auto px-4 relative z-10 mt-12 md:mt-0'>
+    <div className='py-20 md:py-28 bg-gray-50'>
+      <div className='container mx-auto px-4 max-w-6xl'>
+        {/* --- Parte 1: Formulario de Contacto --- */}
         <motion.div
-          initial={{ y: -20, opacity: 0 }}
+          initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className='text-center mb-16'
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
         >
-          <p className='font-semibold text-pink-600 mb-2'>CONTACT</p>
-          <h2 className='text-4xl md:text-5xl font-bold text-gray-800'>
-            Get In Touch
-          </h2>
-        </motion.div>
-
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16'>
-          {/* Columna de Información (Izquierda) */}
-          <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: 'easeOut' }}
-            className='space-y-8'
-          >
-            <h3 className='text-2xl font-bold text-gray-800'>
-              Contact Information
-            </h3>
-            <div className='space-y-6 text-gray-700'>
-              <div className='flex items-start gap-4'>
-                <LuMapPin
-                  size={24}
-                  className='text-pink-600 mt-1 flex-shrink-0'
-                />
-                <div>
-                  <h4 className='font-semibold'>Our Address</h4>
-                  <p>{dataSite.address}</p>
+          <div className='text-center mb-12'>
+            <h2 className='text-4xl md:text-5xl font-bold text-gray-900'>
+              Request a Project Consultation
+            </h2>
+          </div>
+          <AnimatePresence>
+            {isSubmitted ? (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className='bg-green-50 border border-green-200 text-green-800 p-8 rounded-lg text-center'
+              >
+                <h3 className='text-2xl font-bold mb-4'>Thank you!</h3>
+                <p>Your request has been sent. We will contact you shortly.</p>
+              </motion.div>
+            ) : (
+              <form
+                onSubmit={handleSubmit}
+                noValidate
+                className='grid grid-cols-1 md:grid-cols-2 gap-6'
+              >
+                <div className='md:col-span-2'>
+                  <input
+                    type='text'
+                    name='name'
+                    placeholder='Your Name'
+                    value={formData.name}
+                    onChange={handleChange}
+                    className={`w-full p-3 border rounded-md focus:outline-none focus:ring-2 ${
+                      errors.name
+                        ? 'border-red-500 focus:ring-red-500'
+                        : 'border-gray-300 focus:ring-pink-500'
+                    }`}
+                  />
+                  {errors.name && (
+                    <p className='text-red-500 text-sm mt-1'>{errors.name}</p>
+                  )}
                 </div>
-              </div>
-              <div className='flex items-start gap-4'>
-                <LuPhone
-                  size={24}
-                  className='text-pink-600 mt-1 flex-shrink-0'
-                />
                 <div>
-                  <h4 className='font-semibold'>Phone Number</h4>
-                  <a
-                    href={`tel:${dataSite.telephone}`}
-                    className='hover:text-pink-600'
+                  <input
+                    type='email'
+                    name='email'
+                    placeholder='Your Email'
+                    value={formData.email}
+                    onChange={handleChange}
+                    className={`w-full p-3 border rounded-md focus:outline-none focus:ring-2 ${
+                      errors.email
+                        ? 'border-red-500 focus:ring-red-500'
+                        : 'border-gray-300 focus:ring-pink-500'
+                    }`}
+                  />
+                  {errors.email && (
+                    <p className='text-red-500 text-sm mt-1'>{errors.email}</p>
+                  )}
+                </div>
+                <div>
+                  {/* El campo de teléfono ahora está conectado al estado */}
+                  <input
+                    type='tel'
+                    name='phone'
+                    placeholder='Your Phone (Optional)'
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className='w-full p-3 border rounded-md focus:outline-none focus:ring-2 border-gray-300 focus:ring-pink-500'
+                  />
+                </div>
+                <div className='md:col-span-2'>
+                  <textarea
+                    name='message'
+                    placeholder='Briefly describe your project...'
+                    rows={5}
+                    value={formData.message}
+                    onChange={handleChange}
+                    className={`w-full p-3 border rounded-md focus:outline-none focus:ring-2 ${
+                      errors.message
+                        ? 'border-red-500 focus:ring-red-500'
+                        : 'border-gray-300 focus:ring-pink-500'
+                    }`}
+                  ></textarea>
+                  {errors.message && (
+                    <p className='text-red-500 text-sm mt-1'>
+                      {errors.message}
+                    </p>
+                  )}
+                </div>
+                <div className='md:col-span-2 text-center'>
+                  <button
+                    type='submit'
+                    className='px-10 py-3 bg-pink-600 text-white font-semibold rounded-md hover:bg-pink-700 transition-colors'
                   >
-                    {dataSite.telephone}
-                  </a>
+                    Submit Request
+                  </button>
                 </div>
-              </div>
-              <div className='flex items-start gap-4'>
-                <LuMail
-                  size={24}
-                  className='text-pink-600 mt-1 flex-shrink-0'
-                />
-                <div>
-                  <h4 className='font-semibold'>Email Address</h4>
-                  <a href={`mailto:${email}`} className='hover:text-pink-600'>
-                    {email}
-                  </a>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Columna de Formulario (Derecha) */}
-          <motion.div
-            initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: 'easeOut' }}
-            className='bg-gray-50 p-8 rounded-lg border border-gray-200'
-          >
-            <AnimatePresence>
-              {isSubmitted ? (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className='text-center h-full flex flex-col justify-center min-h-[300px]'
-                >
-                  <h3 className='text-2xl font-bold text-purple-700 mb-4'>
-                    Thank you!
-                  </h3>
-                  <p className='text-gray-600'>
-                    Your message has been sent. We will contact you shortly.
-                  </p>
-                </motion.div>
-              ) : (
-                <motion.form
-                  exit={{ opacity: 0 }}
-                  onSubmit={handleSubmit}
-                  noValidate
-                >
-                  {/* ... los inputs del formulario se mantienen igual ... */}
-                  <div className='space-y-6'>
-                    <div>
-                      <input
-                        type='text'
-                        name='name'
-                        placeholder='Your Name'
-                        value={formData.name}
-                        onChange={handleChange}
-                        className={`w-full p-3 border rounded-md focus:outline-none focus:ring-2 ${
-                          errors.name
-                            ? 'border-red-500 focus:ring-red-500'
-                            : 'border-gray-300 focus:ring-pink-500'
-                        }`}
-                      />
-                      {errors.name && (
-                        <p className='text-red-500 text-sm mt-1'>
-                          {errors.name}
-                        </p>
-                      )}
-                    </div>
-                    <div>
-                      <input
-                        type='email'
-                        name='email'
-                        placeholder='Your Email'
-                        value={formData.email}
-                        onChange={handleChange}
-                        className={`w-full p-3 border rounded-md focus:outline-none focus:ring-2 ${
-                          errors.email
-                            ? 'border-red-500 focus:ring-red-500'
-                            : 'border-gray-300 focus:ring-pink-500'
-                        }`}
-                      />
-                      {errors.email && (
-                        <p className='text-red-500 text-sm mt-1'>
-                          {errors.email}
-                        </p>
-                      )}
-                    </div>
-                    <div>
-                      <textarea
-                        name='message'
-                        placeholder='Your Message'
-                        rows={5}
-                        value={formData.message}
-                        onChange={handleChange}
-                        className={`w-full p-3 border rounded-md focus:outline-none focus:ring-2 ${
-                          errors.message
-                            ? 'border-red-500 focus:ring-red-500'
-                            : 'border-gray-300 focus:ring-pink-500'
-                        }`}
-                      ></textarea>
-                      {errors.message && (
-                        <p className='text-red-500 text-sm mt-1'>
-                          {errors.message}
-                        </p>
-                      )}
-                    </div>
-                    <div>
-                      <button
-                        type='submit'
-                        className='w-full px-8 py-3 bg-pink-600 text-white font-semibold rounded-full hover:bg-pink-700 transition-all duration-300 transform hover:scale-105'
-                      >
-                        Send Message
-                      </button>
-                    </div>
-                  </div>
-                </motion.form>
-              )}
-            </AnimatePresence>
-          </motion.div>
-        </div>
+              </form>
+            )}
+          </AnimatePresence>
+        </motion.div>
       </div>
-      {/* Divisor ondulado inferior */}
-      <div className='absolute bottom-0 left-0 w-full transform -scale-y-100'>
-        <svg
-          viewBox='0 0 1440 100'
-          fill='none'
-          xmlns='http://www.w3.org/2000/svg'
-        >
-          <path
-            d='M0 100H1440V0C1181.33 118.667 809.5 73.3333 550.5 28C291.5 -17.3333 131.333 41.3333 0 100Z'
-            fill='#262B57'
-          />
-        </svg>
-      </div>
-    </section>
+    </div>
   );
 };
 
-export default ContactSection;
+export default ContactFooter;

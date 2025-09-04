@@ -10,7 +10,8 @@ import ProjectsSection from '@/components/organisms/OurWork';
 import PricingSection from '@/components/organisms/Products';
 import TestimonialsSection from '@/components/organisms/Testimonial';
 import ContactSection from '@/components/organisms/Contact';
-import BenefitsSection from '@/components/organisms/Benefits';
+import WhyUs from '@/components/organisms/WhyChooseUsSection';
+import TeamSection from '@/components/organisms/Team';
 
 export default function Home() {
   const navigate = useRouter();
@@ -19,12 +20,14 @@ export default function Home() {
     <main className='relative'>
       <Navbar />
       <HeroSection />
-      <ServicesSection />
       <AboutUsSection />
-      <ProjectsSection />
+      <ServicesSection />
+
       <PricingSection />
+      <TeamSection />
+      <WhyUs />
+      {/* <ProjectsSection /> */}
       <TestimonialsSection />
-      <BenefitsSection />
       <ContactSection />
       <Footer />
     </main>
